@@ -1,21 +1,38 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
+// CIS2013_Week05_Lab1
+
+const int MAX = 30;
+// List of students in our class
+int student[MAX];
+string name[MAX];
+
+void makeStudent(int x){
+	cout << "Enter Student " << x+1 << "'s name ";
+	cin >> name[x];
+	cout << "Enter " << name[x] << "'s grade ";
+	cin >> student[x];
+}
+
+void printGrade(int y){
+	cout << name[y] << "'s grade is " << student[y] << endl;
+}
 
 int main(){
 	
-	const int LEN = 2;
+	int LEN;
 	
-	// List of student in our class
-	int student[LEN];
-		
+	cout << "How many students are in the class: ";
+	cin >> LEN;
+	
 	for(int i=0; i<LEN; i++){
-		cout << "Enter Student " << i+1 << "'s grade ";
-		cin >> student[i];
+		makeStudent(i);
 	}
 	
-	for(int j=0; j<3; j++){
-		cout << "Student " << j+1 <<"'s grade is " << student[j] << endl;		
+	for(int j=0; j<LEN; j++){
+		printGrade(j);
 	}
 	
 	return 0;
