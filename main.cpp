@@ -1,14 +1,15 @@
 #include <iostream>
+
 using namespace std;
 
 int main(){
 	
-	int len = 2;
+	const int LEN = 2;
 	
 	// List of student in our class
-	int student[len];
+	int student[LEN];
 		
-	for(int i=0; i<len; i++){
+	for(int i=0; i<LEN; i++){
 		cout << "Enter Student " << i+1 << "'s grade ";
 		cin >> student[i];
 	}
